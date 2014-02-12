@@ -1,0 +1,8 @@
+{
+  "name": "chef-express-demo",
+  "description": "Demo showing how to deploy an express app with Chef",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": ">= 0"
+  }
+}

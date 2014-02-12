@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd /vagrant
+exec 2>&1
+exec chpst -e<%= node['runit']['sv_dir'] %>/myapp/env node server.js

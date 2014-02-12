@@ -1,0 +1,19 @@
+#!upstart
+description "my app"
+author      "me"
+
+start on startup
+stop on shutdown
+
+chdir /vagrant
+
+script
+    export PORT=<%= @port %>
+
+    echo $$ > /var/run/myapp.pid
+    exec npm start
+end script
+
+pre-stop script
+    rm /var/run/yourprogram.pid
+end script
